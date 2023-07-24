@@ -4,9 +4,7 @@
 
 Integrantes do grupo:
 
-- Carolina Fernandes
 - Eduardo P.P. Ferreira
-- Luis Antonio Benjamin Flexa
 
 ## Como contribuir com o projeto:
 
