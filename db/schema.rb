@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_24_194603) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_25_143726) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_24_194603) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.boolean "like"
+    t.bigint "post_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_feedbacks_on_post_id"
   end
 
   create_table "post_categories", force: :cascade do |t|
@@ -37,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_24_194603) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "feedbacks", "posts"
   add_foreign_key "post_categories", "categories"
   add_foreign_key "post_categories", "posts"
 end
