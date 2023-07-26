@@ -4,10 +4,7 @@
 
 Integrantes do grupo:
 
-- Carolina Fernandes
 - Eduardo P.P. Ferreira
-- Luis Antonio Benjamin Flexa
-- Pedro Menezes
 
 ## Como contribuir com o projeto:
 
@@ -17,7 +14,13 @@ Para dar inicio à contribuição, é necessário clonar o repositório:
 
 Feito isso, rode `bundle install` para iniciar as gems do repositório (para mais informações, veja a seção de dependências deste projeto).
 
-Sempre que quiser iniciar um novo trabalho neste repositório, **abra um novo issue** na seção *issues* no GitHub. Coloque seu nome no issue para marcá-lo como sua tarefa. Além disso, **crie uma nova branch**, como
+As contribuições neste projeto são feitas durante os *sprints* definidos de acordo com a metodologia ágil SCRUM.
+
+Para contribuir durante um sprint, **certifique-se de mudar para a branch do sprint atual**, como por exemplo
+
+`git checkout sprint-Models`
+
+Sempre que quiser iniciar um novo trabalho neste repositório, **abra um novo issue** na seção *issues* no GitHub. Coloque seu nome no issue para marcá-lo como sua tarefa. Além disso, **crie uma nova branch a partir da branch do sprint atual**, como
 
 `git branch issueN069`,
 
@@ -35,7 +38,7 @@ Dependendo do caso, talvez seja necessário abrir um **pull request (PR)** para 
 
 No próprio GitHub, isso pode ser feito ao ir na aba *Pull requests* e clicar em *New pull request*, ou, na página inicial do repositório, mudando para a branch que quer dar merge e clicando em *Contribute* no menu contextual que aparecerá logo acima dos arquivos dessa branch.
 
-Em qualquer caso, é importante selecionar a branch **que será mesclada** (no caso, a branch onde foi feito o trabalho) e a branch **na qual será** mesclada, que não necessariamente precisa ser a branch principal (main/master).
+Em qualquer caso, é importante selecionar a branch **que será** mesclada (no caso, a branch onde foi feito o trabalho) e a branch **na qual será** mesclada. Durante os sprints, todos os issues serão mesclados na branch do sprint. Ao final do sprint, e após revisão, essa branch será mesclada à main.
 
 ____
 
@@ -57,8 +60,8 @@ Aqui estão listados os passos tomados para configuração inicial das gems no i
 
 *Factory Bot*:
 
-`bundle install`, depois foi criada a pasta *spec\support*, onde foi criado o arquivo *factory_bot.rb*.
+`bundle install`, depois foi criada a pasta *spec/support*, onde foi criado o arquivo *factory_bot.rb*.
 
 ### Base de Dados:
 
-Em *config > application.yml*, descomente as duas últimas linhas (*db_user* e *db_password*) apenas se necessário (verificar vídeo "Trainee 2023/1 - Rails API Models", 12min).
+Em *config > application.yml*, descomente as duas últimas linhas (*db_user* e *db_password*) apenas se necessário (verificar vídeo "Trainee 2023/1 - Rails API Models", aos 12min).
