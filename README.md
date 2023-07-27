@@ -66,12 +66,12 @@ Aqui estão listados os passos tomados para configuração inicial das gems no i
 
 `bundle install`, depois foi criada a pasta *app/serializer*. Nessa pasta, são criados os arquivos de serializer para cada model (nem todas as models precisam de serializer).
 
-*Devise*
+*Devise*:
 
     bundle install
     rails g devise:install
 
-*Simple Token Authentication*
+*Simple Token Authentication*:
 
     bundle install
 
