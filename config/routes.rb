@@ -34,9 +34,9 @@ Rails.application.routes.draw do
         delete 'delete/:id', to:'commentaries#delete'
       end
 
-      # scope 'users' do
-      #   get 'login', to:'users#login'
-      # end
+      scope 'users' do
+        get 'login', to:'users#login'
+      end
     end
   end
 end
