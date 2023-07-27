@@ -1,7 +1,14 @@
 class PostSerializer < Panko::Serializer
-  attributes :title, :content, :id
+  attributes :title, :content, :id, :images_url
 
-  # def image_url
-  #   Rails.application.routes.url_helpers.rails_blob_path(object.image, only_path: true) if object.image.attached?
-  # end
+  def images_url
+    array = []
+    if object.images.attached?
+      object.images.each do |image|
+        array.append Rails.application.routes.url_helpers.rails_blob_path(image, only_path: true)
+      end
+    end
+    return array
+  end
+
 end

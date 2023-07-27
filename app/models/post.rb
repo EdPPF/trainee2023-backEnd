@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :feedbacks, dependent: :destroy
   has_many :post_category, dependent: :destroy
 
-  # has_one_attached :image
+  has_many_attached :images
 
   validates :title, presence: :true
   validates :content, presence: :true
