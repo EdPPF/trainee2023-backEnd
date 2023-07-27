@@ -78,3 +78,8 @@ Aqui estão listados os passos tomados para configuração inicial das gems no i
 ### Base de Dados:
 
 Em *config > application.yml*, descomente as duas últimas linhas (*db_user* e *db_password*) apenas se necessário (verificar vídeo "Trainee 2023/1 - Rails API Models", aos 12min).
+
+Uma ferramenta que não é exataente uma *gem* mas se relaciona com o banco de dados é o *Active Storage*, instalado por meio dos comandos:
+
+    rails active_storage:install
+    rails db:migrate
