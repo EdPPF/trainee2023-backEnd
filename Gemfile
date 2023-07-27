@@ -55,3 +55,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
   gem 'factory_bot_rails', '~> 6.2'
 end
+
+gem 'panko_serializer'
