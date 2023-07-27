@@ -57,3 +57,6 @@ group :development, :test do
 end
 
 gem 'panko_serializer'
+
+gem 'devise'
+gem 'simple_token_authentication'

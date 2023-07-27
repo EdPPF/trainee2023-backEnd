@@ -66,6 +66,15 @@ Aqui estão listados os passos tomados para configuração inicial das gems no i
 
 `bundle install`, depois foi criada a pasta *app/serializer*. Nessa pasta, são criados os arquivos de serializer para cada model (nem todas as models precisam de serializer).
 
+*Devise*
+
+    bundle install
+    rails g devise:install
+
+*Simple Token Authentication*
+
+    bundle install
+
 ### Base de Dados:
 
 Em *config > application.yml*, descomente as duas últimas linhas (*db_user* e *db_password*) apenas se necessário (verificar vídeo "Trainee 2023/1 - Rails API Models", aos 12min).
