@@ -1,6 +1,6 @@
 class Api::V1::PostsController < ApplicationController
   acts_as_token_authentication_handler_for User, only:[:create, :update, :delete]
-  # before_action :admin_authentication, only:[:create, :update, :delete]
+  before_action :admin_authentication, only:[:create, :update, :delete]
 
   def create
     post = Post.new(post_params)
@@ -40,7 +40,7 @@ class Api::V1::PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :user_id)
     end
 
     def serializer(post)
