@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   namespace 'api' do
     namespace 'v1' do
       scope 'posts' do
@@ -33,9 +34,9 @@ Rails.application.routes.draw do
         delete 'delete/:id', to:'commentaries#delete'
       end
 
-      # scope 'users' do
-      #   get 'login', to:'users#login'
-      # end
+      scope 'users' do
+        get 'login', to:'users#login'
+      end
     end
   end
 end

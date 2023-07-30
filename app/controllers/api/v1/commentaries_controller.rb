@@ -1,6 +1,6 @@
 class Api::V1::CommentariesController < ApplicationController
-  # acts_as_token_authentication_handler_for User, only:[:create, :update, :delete]
-  # before_action :admin_authentication, only:[:create, :update, :delete]
+  acts_as_token_authentication_handler_for User, only:[:create, :update, :delete]
+  before_action :admin_authentication, only:[:create, :update, :delete]
 
   def create
     commen = Commentary.new(commentary_params)

@@ -1,7 +1,7 @@
-class PostSerializer < Panko::Serializer
-  attributes :title, :content, :id, :images_url
+class UserSerializer < Panko::Serializer
+  attributes :id, :name, :email, :authentication_token, :profile_pictures_url
 
-  def images_url
+  def profile_pictures_url
     array = []
     if object.images.attached?
       object.images.each do |image|
