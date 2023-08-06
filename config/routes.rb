@@ -18,6 +18,11 @@ Rails.application.routes.draw do
         delete 'delete/:id', to:'categories#delete'
       end
 
+      scope 'post_categories' do
+        get 'index', to:'post_categories#index'
+        get 'show/:id', to:'post_categories#show'
+      end
+
       scope 'feedbacks' do
         post 'create', to:'feedbacks#create'
         get 'index', to:'feedbacks#index'
