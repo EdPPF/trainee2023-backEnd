@@ -40,7 +40,7 @@ Rails.application.routes.draw do
       end
 
       scope 'users' do
-        get 'login', to:'users#login'
+        post 'login', to:'users#login'
       end
     end
   end
