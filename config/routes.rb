@@ -41,6 +41,7 @@ Rails.application.routes.draw do
 
       scope 'users' do
         post 'login', to:'users#login'
+        post 'create', to:'users#create'
       end
     end
   end
