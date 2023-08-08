@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         get 'show/:id', to:'posts#show'
         patch 'update/:id', to:'posts#update'
         delete 'delete/:id', to:'posts#delete'
+        get 'get_posts_by_categ/:category_id', to:'posts#get_posts_by_categ'
       end
 
       scope 'categories' do

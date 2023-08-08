@@ -38,6 +38,15 @@ class Api::V1::PostsController < ApplicationController
     render json: e, status: :not_found
   end
 
+  def get_posts_by_categ
+    category_id = params[:category_id]
+    # posts = Post.joins(:post_categories).where('post_categories.category_id = ?', category_id)
+    posts = Post.where(id: PostCategory.select(:post_id).where(category_id: category_id))
+    render json: posts
+  rescue StandardError => e
+    render json: e, ststus: :bad_request
+  end
+
   private
     def post_params
       params.require(:post).permit(:title, :content, :user_id, image: [])

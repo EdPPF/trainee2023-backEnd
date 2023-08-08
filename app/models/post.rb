@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 
   has_many :commentaries, dependent: :destroy
   has_many :feedbacks, dependent: :destroy
-  has_many :post_category, dependent: :destroy
+  has_many :post_categories, dependent: :destroy
 
   has_many_attached :images
 
