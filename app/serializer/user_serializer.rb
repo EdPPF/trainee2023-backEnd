@@ -1,5 +1,5 @@
 class UserSerializer < Panko::Serializer
-  attributes :id, :name, :email, :authentication_token, :profile_pictures_url, :is_admin
+  attributes :id, :name, :email, :authentication_token, :is_admin
 
   def profile_pictures_url
     array = []

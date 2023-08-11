@@ -13,17 +13,26 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    render json: user, status: :ok
+    render json: serializer(user), status: :ok
   rescue StandardError
     head(:not_found)
+  end
+
+  def find_by_email
+    user = User.find_by!(email: params[:email]+".com")
+    # user = User.where(email: params[:email]+".com").ids[0]
+    render json: serializer(user), status: :ok
+  # rescue StandardError
+  #   head(:not_found)
   end
 
   def create
     user = User.new(user_params)
     user.save!
     render json: serializer(user), status: :created
-  rescue StandardError => e
-    render json: e, status: :bad_request
+    # render json: User.create!(user_params), status: :created
+  # rescue StandardError => e
+  #   render json: e, status: :bad_request
   end
 
   private

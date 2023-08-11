@@ -44,6 +44,7 @@ Rails.application.routes.draw do
         post 'login', to:'users#login'
         post 'create', to:'users#create'
         get 'show/:id', to:'users#show'
+        get 'show_by_email/:email', to:'users#find_by_email'
       end
     end
   end
